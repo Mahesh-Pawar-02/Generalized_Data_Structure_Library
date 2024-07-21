@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-template <class T>
+template <class T>  // T template
 struct node
 {
     T data;
@@ -259,8 +259,6 @@ int main()
 
     cout<<"LinkedList of Characters : "<<"\n";
     cobj.Display();
-
-    
 
     return 0;
 }
