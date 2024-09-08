@@ -16,7 +16,8 @@ Each data structure is implemented with common operations such as insertion, del
 
 ## Technologies Used
 
-- **Java**: All data structures are implemented in Java, taking advantage of object-oriented design principles to create reusable and efficient components.
+- **Java**: Data structures are implemented in Java, taking advantage of object-oriented design principles to create reusable and efficient components.
+- **C & C++**: Data structures are implemented in C, taking advantage of object-oriented design principles to create reusable and efficient components.
   
 ## Installation and Setup
 
@@ -27,24 +28,28 @@ Navigate to the project directory:
 bash
 Copy code
 cd Generalized_Data_Structure_Library
-Open the project in your preferred IDE (such as IntelliJ IDEA or Eclipse).
+Open the project in your preferred IDE (such as visual studio code).
 Usage
 You can directly use the data structures in your projects by importing the corresponding classes.
 
 Usage
-You can directly use the data structures in your projects by importing the corresponding classes. For example, to use the Stack:
+You can directly use the data structures in your projects by importing the corresponding classes. For example, to use the Insertion Sort:
 
 ```
-import generalized_data_structure_library.Stack;
+void Insertion_Sort(int *arr,int size)
+{
+    int i = 0,j = 0,key = 0;
+    for(i = 1;i < size;i++)
+    {
+        key = arr[i];
+        j = i - 1;
 
-public class Main {
-    public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<>();
-        stack.push(1);
-        stack.push(2);
-        System.out.println("Top of stack: " + stack.peek());
-        stack.pop();
-        System.out.println("Top of stack after pop: " + stack.peek());
+        while(j >= 0 && arr[j] > key)
+        {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = key;
     }
 }
 ```
